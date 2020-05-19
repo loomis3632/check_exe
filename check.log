@@ -1,0 +1,105 @@
+Fri, 15 May 2020 16:10:18 sjisprober.py[line:61] DEBUG SHIFT_JIS Japanese prober hit error at byte 182
+Fri, 15 May 2020 16:10:18 mbcharsetprober.py[line:66] DEBUG EUC-TW Taiwan prober hit error at byte 175
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:97] DEBUG utf-8 not active
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:97] DEBUG SHIFT_JIS not active
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG EUC-JP Japanese confidence = 0.1111111111111111
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG GB2312 Chinese confidence = 0.99
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG EUC-KR Korean confidence = 0.01
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG CP949 Korean confidence = 0.01
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG Big5 Chinese confidence = 0.01
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:97] DEBUG EUC-TW not active
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG windows-1251 Russian confidence = 0.0
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG KOI8-R Russian confidence = 0.0
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG ISO-8859-5 Russian confidence = 0.09101863390359921
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG MacCyrillic Russian confidence = 0.01
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG IBM866 Russian confidence = 0.01
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG IBM855 Russian confidence = 0.0
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG ISO-8859-7 Greek confidence = 0.0
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG windows-1253 Greek confidence = 0.0
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG ISO-8859-5 Bulgairan confidence = 0.0
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG windows-1251 Bulgarian confidence = 0.0
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG TIS-620 Thai confidence = 0.09895083330994495
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG ISO-8859-9 Turkish confidence = 0.36161769301652213
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG ISO-8859-8 Hebrew confidence = 0.0
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG ISO-8859-8 Hebrew confidence = 0.0
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG ISO-8859-8 Hebrew confidence = 0.15879000491867917
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:97] DEBUG utf-8 not active
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:97] DEBUG SHIFT_JIS not active
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG EUC-JP Japanese confidence = 0.1111111111111111
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG GB2312 Chinese confidence = 0.99
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG EUC-KR Korean confidence = 0.01
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG CP949 Korean confidence = 0.01
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:100] DEBUG Big5 Chinese confidence = 0.01
+Fri, 15 May 2020 16:10:18 charsetgroupprober.py[line:97] DEBUG EUC-TW not active
+Fri, 15 May 2020 16:10:19 check.py[line:149] INFO 正在处理第1个文本；路径:E:\dataset\check_test_data\txt_test.txt
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG utf-8  confidence = 0.99
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG SHIFT_JIS Japanese confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG EUC-JP Japanese confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG GB2312 Chinese confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG EUC-KR Korean confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG CP949 Korean confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG Big5 Chinese confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG EUC-TW Taiwan confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG windows-1251 Russian confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG KOI8-R Russian confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-5 Russian confidence = 0.002753730145200928
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG MacCyrillic Russian confidence = 0.02782066719773393
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG IBM866 Russian confidence = 0.054672737795084365
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG IBM855 Russian confidence = 0.03973548271840908
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-7 Greek confidence = 0.0
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG windows-1253 Greek confidence = 0.0
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-5 Bulgairan confidence = 0.0027172171250383513
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG windows-1251 Bulgarian confidence = 0.0
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG TIS-620 Thai confidence = 0.07346503389420458
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-9 Turkish confidence = 0.02394800989685721
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG windows-1255 Hebrew confidence = 0.0
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG windows-1255 Hebrew confidence = 0.0
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG windows-1255 Hebrew confidence = 0.0
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG utf-8  confidence = 0.99
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG SHIFT_JIS Japanese confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG EUC-JP Japanese confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG GB2312 Chinese confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG EUC-KR Korean confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG CP949 Korean confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG Big5 Chinese confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG EUC-TW Taiwan confidence = 0.01
+Fri, 15 May 2020 16:10:19 check.py[line:149] INFO 正在处理第2个文本；路径:E:\dataset\check_test_data\ParentFileinfo_00.txt
+Fri, 15 May 2020 16:10:19 sjisprober.py[line:61] DEBUG SHIFT_JIS Japanese prober hit error at byte 11
+Fri, 15 May 2020 16:10:19 mbcharsetprober.py[line:66] DEBUG EUC-KR Korean prober hit error at byte 95
+Fri, 15 May 2020 16:10:19 mbcharsetprober.py[line:66] DEBUG CP949 Korean prober hit error at byte 95
+Fri, 15 May 2020 16:10:19 mbcharsetprober.py[line:66] DEBUG EUC-TW Taiwan prober hit error at byte 10
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:97] DEBUG utf-8 not active
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:97] DEBUG SHIFT_JIS not active
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG EUC-JP Japanese confidence = 0.025056947608200455
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG GB2312 Chinese confidence = 0.99
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:97] DEBUG EUC-KR not active
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:97] DEBUG CP949 not active
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG Big5 Chinese confidence = 0.012317167051578136
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:97] DEBUG EUC-TW not active
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG windows-1251 Russian confidence = 0.024847158996758052
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG KOI8-R Russian confidence = 0.125451067528672
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-5 Russian confidence = 0.08824601139568371
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG MacCyrillic Russian confidence = 0.01
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG IBM866 Russian confidence = 0.009827852494007614
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG IBM855 Russian confidence = 0.11385693112416718
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-7 Greek confidence = 0.010498777775336383
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG windows-1253 Greek confidence = 0.01140285302944831
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-5 Bulgairan confidence = 0.09397290791129737
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG windows-1251 Bulgarian confidence = 0.03631888450580176
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG TIS-620 Thai confidence = 0.0960250622812923
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-9 Turkish confidence = 0.02189752783336429
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-8 Hebrew confidence = 0.0
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-8 Hebrew confidence = 0.0023991431677815333
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG ISO-8859-8 Hebrew confidence = 0.016794002174470732
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:97] DEBUG utf-8 not active
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:97] DEBUG SHIFT_JIS not active
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG EUC-JP Japanese confidence = 0.025056947608200455
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG GB2312 Chinese confidence = 0.99
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:97] DEBUG EUC-KR not active
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:97] DEBUG CP949 not active
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:100] DEBUG Big5 Chinese confidence = 0.012317167051578136
+Fri, 15 May 2020 16:10:19 charsetgroupprober.py[line:97] DEBUG EUC-TW not active
+Fri, 15 May 2020 16:10:22 __init__.py[line:117] DEBUG Building prefix dict from the default dictionary ...
+Fri, 15 May 2020 16:10:22 __init__.py[line:137] DEBUG Loading model from cache C:\Users\admin\AppData\Local\Temp\jieba.cache
+Fri, 15 May 2020 16:10:22 __init__.py[line:169] DEBUG Loading model cost 0.657 seconds.
+Fri, 15 May 2020 16:10:22 __init__.py[line:170] DEBUG Prefix dict has been built succesfully.

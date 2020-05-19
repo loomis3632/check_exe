@@ -142,7 +142,7 @@ def get_bigram_info(txt_path, dict_map, matrix):
     :param txt_path:
     :return:
     """
-    dir = r'./model/'
+    dir = r'./model2/'
     coding = get_encoding(txt_path)
     with open(txt_path, 'r', encoding=coding, errors='ignore') as rf:
         res = ""
@@ -155,7 +155,7 @@ def get_bigram_info(txt_path, dict_map, matrix):
             if file_content_flag == 1 and not line.startswith('<上传日期>='):
                 res = res + line
             if file_content_flag == 1 and line.startswith('<上传日期>='):
-                print(res)
+                # print(res)
 
                 dict_map = get_dict_map(res, dict_map)
                 save_variable(dict_map, dir + r'dict_map.txt')
@@ -168,7 +168,11 @@ def get_bigram_info(txt_path, dict_map, matrix):
                 file_content_flag = 0
 
 
-def model_2gram_train():
+def bigram_train():
+    """
+    不需要处理的文件，进行训练
+    :return:
+    """
     dir = BASE_DIR + r'./model/'  # 存储模型等的文件夹
     # dir = r'./'  # 存储模型等的文件夹
 
@@ -207,6 +211,10 @@ def model_2gram_train():
 
 
 def bigram_train2():
+    """
+    需要先对文件进行处理
+    :return:
+    """
     # dir = BASE_DIR + r'./model/'  # 存储模型等的文件夹
     dir = r'./model/'  # 存储模型等的文件夹
 
@@ -214,7 +222,7 @@ def bigram_train2():
     dict_map_length = load_variable(dir + 'dict_map_length.txt')
     matrix = load_variable(dir + 'matrix.txt')  # 加载二维矩阵
     path_lists = get_all_path()
-    print(path_lists)
+    # print(path_lists)
     for path in path_lists:
         coding = get_encoding(path)
         with open(path, 'r', encoding=coding, errors='ignore') as rf:  # 读取语料文件的保存的路径文件
@@ -228,5 +236,5 @@ def bigram_train2():
 
 
 if __name__ == '__main__':
-    # model_2gram_train()
+    # bigram_train()
     bigram_train2()

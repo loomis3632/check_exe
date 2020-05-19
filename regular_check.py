@@ -27,7 +27,7 @@ def get_engset():
 
 engset = set()  # 全局变量
 get_engset()
-
+print(engset)
 
 def filter_catalog(one_dict):
     """
