@@ -1,1 +1,0 @@
-E:\dataset\check_test_data\txt_test.txt;regular_check:NormalE:\dataset\check_test_data\txt_test.txt;regular_check:Normal
