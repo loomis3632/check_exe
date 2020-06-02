@@ -5,7 +5,7 @@
 import re
 import csv
 import jieba_fast as jieba
-import char_count
+import char_count2
 
 dir = r"./model2/"  # 存放所需文件的文件夹，与该py文件同级目录
 
@@ -83,7 +83,7 @@ def filter_catalog(one_dict):
     :param one_dict: 字典
     :return: 返回过滤后的字典
     """
-    one_pattern = r'([………,‥]{2,})|([‥,… ,┈ ,--,/]{3,})|([,=]{4,})|([・,.,．,─,― ,―,·,_,-,. , ―,—,· ,。,*,/,x,|,＿]{7,})'
+    one_pattern = r'([………,‥]{2,})|([‥,… ,┈ ,--,/]{3,})|([,=]{4,})|([・,.,．,─,― ,―,·,_, ―,-,. ,—,· ,。,*,/,x,|,＿]{7,})'
     pattern = re.compile(one_pattern)
 
     for key in list(one_dict):
@@ -210,11 +210,11 @@ def regular_check(one_string="", size=100, interval=50, ratio=5, regular_index=N
     :param one_pattern: 用户自定义的正则表达式
     :return: 字典，key：位置和最大字符的字符串；value：检测有问题的子字符串
     """
-    check_res = char_count.char_count(one_string, size, interval, ratio)
+    check_res = char_count2.char_count(one_string, size, interval, ratio)
     func_index = [1, 2, 3, 4, 5]
 
     if not regular_index:
-        regular_index = [1, 2, 3, 4, 5]  # 若没给出参数值，则默认使用全部参数
+        regular_index = [1, 2, 3, 4, 5]
     else:
         regular_index = list(set(regular_index) & set(func_index))  # 求交集，用于参数检查
     if len(check_res) != 0:
@@ -256,4 +256,15 @@ if __name__ == '__main__':
     # one_string = "发ssssssssssssssssssssssssssssssssssssssss现应该是因为python2.x的默认编码是ascii，而代码中可能由utf-8的字符导致，解决方法是设置utf-8。"
     one_string = "khasds中文中文中文中文中文中文中国12367890,.，。、,中中中中中中中中中中中中中中中中中中Jér?me中文"
     res = regular_check(one_string, size=100, interval=50, ratio=5, regular_index=[1, 5, 2, 4, 3], one_pattern="")
-    print(res)
+    # txt_path = r"E:\pycharm_pro/check_exe/regular_check_exe_res.txt"
+    # coding = get_encoding(txt_path)
+    # print(coding)
+    # with open(txt_path, 'r', encoding=coding, errors='ignore') as rf:
+    #     count = 0
+    #     for line in rf:
+    #         count += 1
+    #         if count <= 100:
+    #             res = regular_check(line, size=100, interval=50, ratio=5, regular_index=[1, 5, 2, 4, 3], one_pattern="")
+    #             if res != "regular_check:Normal":
+    #                 # print(type(res),res)
+    #                 pass

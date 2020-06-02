@@ -4,7 +4,7 @@
 # @Desc  : 对输入的字符串统计
 import re
 from collections import Counter
-
+from collections import defaultdict
 
 # 字符串最大字符统计
 def max_char_number(one_string):
@@ -37,7 +37,8 @@ def char_count(one_string, size, interval, ratio):
     one_string = re.sub(r'[\n\t\r]', '', one_string)
     one_string_length = len(one_string)
     first = 0  # 起始位置
-    res_dict = dict()
+    # res_dict = dict()
+    res_dict = defaultdict(str)
     dict_index = 0
     diff = size  # 用于补齐字符串末端字符不全
 
@@ -49,7 +50,7 @@ def char_count(one_string, size, interval, ratio):
         if one_string_part_length >= 20:  # 最低的检测字符数
             max_char, max_number, one_string_part_re = max_char_number(one_string_part)
             if max_number * ratio > one_string_part_length:
-                dict_index = str(dict_index) + "-" +str(one_string_part_index)+"-"+ max_char
+                dict_index = str(dict_index) + "-" + str(one_string_part_index) + "-" + max_char
                 res_dict[dict_index] = one_string_part
                 dict_index = int(dict_index.split("-")[0])
                 dict_index += 1
@@ -58,6 +59,3 @@ def char_count(one_string, size, interval, ratio):
         size = interval + size
 
     return res_dict
-
-
-

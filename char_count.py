@@ -44,11 +44,12 @@ def char_count(one_string, size, interval, ratio):
     while (size < one_string_length + diff):
         one_string_part = one_string[first:size]  # 若字符串长度小于size，则size就是长度的位置
         one_string_part_length = len(one_string_part)
+        one_string_part_index = one_string.find(one_string_part)
 
-        if one_string_part_length >= 15:  # 最低的检测字符数
+        if one_string_part_length >= 20:  # 最低的检测字符数
             max_char, max_number, one_string_part_re = max_char_number(one_string_part)
             if max_number * ratio > one_string_part_length:
-                dict_index = str(dict_index) + "-" + max_char
+                dict_index = str(dict_index) + "-" + str(one_string_part_index) + "-" + max_char
                 res_dict[dict_index] = one_string_part
                 dict_index = int(dict_index.split("-")[0])
                 dict_index += 1

@@ -17,6 +17,8 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S', filename='check_exe.log', filemode='w')
 
+dir = r"./model/"
+
 
 class MyThread(Thread):
     """
@@ -38,7 +40,28 @@ class MyThread(Thread):
             return None
 
 
+def get_stopwords():
+    """
+    获取停止词，修改全局变量stopwords_set
+    :return:
+    """
+    global count
+    count += 1
+    print(count)
+    txt_path = dir + r"cn_stopwords.txt"
+    global stopwords_set
+    with open(txt_path, 'r', encoding="utf-8", errors='ignore') as rf:
+        for line in rf:
+            line_pro = line.strip()
+            if line_pro not in stopwords_set:
+                stopwords_set.add(line_pro)
+    return stopwords_set
 
+# 获取停止词
+count = 0
+stopwords_set = set()
+get_stopwords()
+print(stopwords_set)
 
 
 def get_all_path():
@@ -85,7 +108,10 @@ def get_check_res(txt_path):
             open(bigram_path1, 'a', encoding='utf-8', errors='ignore') as bi_wf1, \
             open(bigram_path2, 'a', encoding='utf-8', errors='ignore') as bi_wf2:
         res = ""
-        bigram_res = ""
+        bigram_error_res = ""
+        bigram_error_temp = ""
+        bigram_new_res = ""
+        bigram_new_temp = ""
         file_content_flag = 0
         file_name = ""
         for line in rf:
@@ -98,16 +124,29 @@ def get_check_res(txt_path):
 
             if file_content_flag == 1 and not line.startswith('<上传日期>='):
                 res = res + line
-                print(line)
+                # print(line)
                 lineLists = re.split('[，,.。？?]', line.strip())
                 for ele in lineLists:
                     # ngram检测
                     str_res, new_str = bigram_check.model_bigram(ele, "0.0001-0.001")
-                    if len(str_res) > 0 or len(new_str) > 0:
-                        print("error_words:" + str_res + "new_words:" + new_str + "----->>" + ele)
+                    if len(str_res) > 1:  # 错词语
+                        char_temp = str_res[1]
+                        if char_temp not in stopwords_set:
+
+
+                            bigram_error_res =  ('%s%s%s%s%s' % (bigram_error_res, str_res,"-->",ele,"\n"))
+                        # print(bigram_error_res)
+                        # print("error_words:" + str_res + "----->>" + ele)
+                    if len(new_str) > 0:  # 新词语
+                        bigram_new_res = ('%s%s%s%s%s' % (bigram_new_res, new_str, "-->", ele, "\n"))
+                        # print("new_words:" + new_str + "----->>" + ele)
+                        # print(bigram_new_res)
+
 
             if file_content_flag == 1 and line.startswith('<上传日期>='):
-                print(res)
+                print(bigram_error_res)
+                print(bigram_new_res)
+                # print(res)
                 # 规则检测
                 # regular_res = regular_check.regular_check(res, size=100, interval=50, ratio=4,
                 #                                           regular_index=[1, 5, 2, 4, 3], one_pattern="")
@@ -138,7 +177,8 @@ def get_check_res(txt_path):
                 #     bi_wf2.write('%s%s%s%s%s' % (txt_path, "--", file_name, new_str, '\n'))
 
                 res = ""
-                bigram_res = ""
+                bigram_error_res = ""
+                bigram_new_res = ""
                 file_content_flag = 0
                 file_name = ""
 

@@ -10,10 +10,10 @@ import sys, os
 if hasattr(sys, 'frozen'):
     os.environ['PATH'] = sys._MEIPASS + ";" + os.environ['PATH']
 
-from threading import Thread
+
 import chardet
 import logging
-import regular_check
+import regular_check_1
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # 要调取其他目录下的文件。 需要在atm这一层才可以
 sys.path.append(BASE_DIR)
@@ -58,17 +58,18 @@ def get_check_res(txt_path):
     :param txt_path:
     :return:
     """
-    regular_path = r"./regular_check_exe_res.txt"
-
+    regular_path = r"./regular_check_exe_res_12.txt"
+    count =1
     coding = get_encoding(txt_path)
     with open(txt_path, 'r', encoding=coding, errors='ignore') as rf, \
             open(regular_path, 'a', encoding='utf-8', errors='ignore') as re_wf:
+
         res = ""
         file_content_flag = 0
         file_name = ""
         for line in rf:
-            if line.startswith('<篇名>='):
-                file_name = line[5:]
+            if line.startswith('<文件名>='):
+                file_name = line[6:]
             if line.startswith('<全文>='):
                 line = line.replace('<全文>=', '')
                 res = res + line
@@ -78,11 +79,16 @@ def get_check_res(txt_path):
                 res = res + line
             if file_content_flag == 1 and line.startswith('<上传日期>='):
                 # 规则检测
-                regular_res = regular_check.regular_check(res, size=100, interval=50, ratio=5,
+                regular_res = regular_check_1.regular_check(res, size=100, interval=50, ratio=5,
                                                           regular_index=[1, 5, 2, 4, 3], one_pattern="")
                 if "regular_check:Normal" not in regular_res:
-                    print(regular_res)
-                    re_wf.write('%s%s%s%s%s' % (txt_path, "--", file_name, regular_res, '\n'))
+                    count+=1
+                    print(count)
+                    temp = ""
+                    for key,value in regular_res.items():
+                        # regular_res[key] = value
+                        temp = temp+str(key)+":"+str(value)+"\n"
+                    re_wf.write('%s%s%s%s' % (txt_path, "--", file_name, temp))
 
                 res = ""
                 file_content_flag = 0
@@ -102,6 +108,7 @@ def check():
                 line_split = line.split('\t')
                 if len(line_split) >= 2:  # 越界
                     txt_path = line_split[1].strip()  # 获取训练txt文件路径
+                    file_number = line_split[0].strip()  # 获取训练txt文件序号
                     if os.path.exists(txt_path):  # 训练文件存在，打开文件
                         count += 1
                         logging.info('正在处理第%s个文本；路径:%s' % (str(count), txt_path))
