@@ -1,0 +1,7 @@
+Mon, 01 Jun 2020 17:31:59 regular_check_exe.py[line:114] INFO 正在处理第1个文本；路径:E:\dataset\check_test_data\ParentFileinfo_66.txt
+Mon, 01 Jun 2020 17:31:59 __init__.py[line:117] DEBUG Building prefix dict from the default dictionary ...
+Mon, 01 Jun 2020 17:31:59 __init__.py[line:137] DEBUG Loading model from cache ./model2/jieba.cache
+Mon, 01 Jun 2020 17:32:00 __init__.py[line:169] DEBUG Loading model cost 0.640 seconds.
+Mon, 01 Jun 2020 17:32:00 __init__.py[line:170] DEBUG Prefix dict has been built succesfully.
+Mon, 01 Jun 2020 17:33:13 regular_check_exe.py[line:114] INFO 正在处理第2个文本；路径:E:\dataset\check_test_data\txt_test.txt
+Mon, 01 Jun 2020 17:33:13 regular_check_exe.py[line:114] INFO 正在处理第3个文本；路径:E:\dataset\check_test_data\ParentFileinfo_00.txt
